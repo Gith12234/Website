@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <title> Home | Fusion Enterprises</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+   <style>
+  
+    .product-section {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 50px 0;
+      text-align: center;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      justify-items: center;
+      margin-top: 30px;
+    }
+
+    .product-category-card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 10px;
+      width: 100%;
+      max-width: 400px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(8px);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    .product-category-card h3 {
+      font-size: 1.8rem;
+      text-align: center;
+      color: white;
+      margin-bottom: 15px;
+    }
+
+    /* 👇 LIMIT visible product items to exactly 4 */
+.dropdown-content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+  max-height: calc((100px + 20px) * 4); /* 4 items max (image height + padding) */
+  overflow-y: auto;
+  padding-right: 10px;
+  box-sizing: border-box;
+  width: 100%;
+}
+.dropdown-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+}
+
+/* Optional: Add a fade mask for overflow (if desired) */
+.dropdown-content::after {
+  content: "";
+  position: sticky;
+  bottom: 0;
+  height: 0px;
+  background: linear-gradient(to bottom, transparent, rgba(0,0,0,0.6));
+  pointer-events: none;
+}
+
+
+
+    .product-item {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      background: rgba(255, 255, 255, 0.07);
+      border-radius: 10px;
+      padding: 20px;
+      color: white;
+      width: 100%;
+    }
+
+    .product-item img {
+      width: 100px;
+      height: 100px;
+      object-fit: contain;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .product-item p {
+      margin: 0;
+      font-size: 1rem;
+      line-height: 1.4;
+      flex: 1;
+      color: white;
+    }
+
+    .product-item p strong {
+      display: inline;
+    }
+
+    .contact-btn {
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 20px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+      text-decoration: none;
+
+    }
+
+    .contact-btn:hover {
+      background-color: #002f1d;
+    }
+
+    footer {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    footer .socials a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: white;
+    }
+
+    .partners-section {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 50px 0;
+      text-align: center;
+      color: white;
+    }
+
+    .partners-logos {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .partners-logos img {
+      max-height: 80px;
+    }
+
+    @media (max-width: 992px) {
+      .product-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .product-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  .product-description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+</style>
+<body>
+  <header>
+    <div class="container">
+         <div class="logo-container">
+           <img src="images/Logo.png" alt="Fusion Enterprises Logo"> <!-- Replace with your logo URL -->
+            <h1>Fusion Enterprises</h1>
+         </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+ <section class="product-section">
+    <h2>Our Featured Product Categories</h2>
+    <div class="product-grid">
+     <div class="product-category-card" data-page="products-automation.html">
+  <h3>Automation</h3>
+  <div class="dropdown-content">
+    <div class="product-item">
+      <img src="images/355-3553289_projects-mitsubishi-motors-logo-removebg-preview.png" alt="Mitsubishi">
+      <div class="product-description">
+        <p><strong>Mitsubishi</strong><br>High-performance automation equipment</p>
+        <a href="products.html#Mitsubishi" class="contact-btn">View Products</a>
+      </div>
+    </div>
+    <div class="product-item">
+      <img src="images/images-removebg-preview.png" alt="Allen Bradley">
+      <div class="product-description">
+        <p><strong>Allen Bradley</strong><br>Industrial automation controllers and systems</p>
+        <a href="products.html#Allen Bradley" class="contact-btn">View Products</a>
+      </div>
+    </div>
+     <div class="product-item">
+      <img src="images/abb-group-baldor-electric-company-automation-logo-mediacube-it39s-partners-5beeb79ac0c972.4158550215423712267897-removebg-preview.png" alt="Allen Bradley">
+      <div class="product-description">
+        <p><strong>ABB</strong><br>Efficient electrical and automation systems</p>
+        <a href="products.html#ABB" class="contact-btn">View Products</a>
+      </div>
+    </div>
+     <div class="product-item">
+      <img src="images/images (2).png" alt="Allen Bradley">
+      <div class="product-description">
+        <p><strong>INGCO</strong><br>Powerful tools built for performance</p>
+        <a href="products.html#INGCO" class="contact-btn">View Products</a>
+      </div>
+    </div>
+     <div class="product-item">
+      <img src="images/images__1_-removebg-preview.png" alt="Allen Bradley">
+      <div class="product-description">
+        <p><strong>Autonics</strong><br>Smart automation with reliable sensing</p>
+        <a href="products.html#Autonics" class="contact-btn">View Products</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="product-category-card" data-page="products-electrical.html">
+  <h3>Electrical Components</h3>
+  <div class="dropdown-content">
+    <div class="product-item">
+      <img src="images/Chint_logo.png" alt="Chint">
+      <div class="product-description">
+        <p><strong>Chint</strong><br>Reliable electrical devices and control components</p>
+         <a href="products.html#Chint" class="contact-btn">View Products</a>
+      </div>
+    </div>
+     <div class="product-item">
+      <img src="images/images-removebg-preview (1).png" alt="Chint">
+      <div class="product-description">
+        <p><strong>Schneider</strong><br>Smart systems for energy management</p>
+       <a href="products.html#Schneider" class="contact-btn">View Products</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="product-category-card" data-page="products-solar.html">
+  <h3>Solar</h3>
+  <div class="dropdown-content">
+    <div class="product-item">
+      <img src="images/huawei-logo-brand-phone-symbol-red-with-name-white-vector-46213934-removebg-preview.png" alt="Huawei">
+      <div class="product-description">
+        <p><strong>Huawei</strong><br>Smart solar inverters and energy solutions</p>
+       <a href="products.html#Huawie" class="contact-btn">View Products</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </section>
+
+<h2 class="foterh">Fusion Enterprises</h2>
+
+  <!-- Footer -->
+
+  <footer>
+    
+  <div class="footer-container">
+    <!-- Left: Logo -->
+    <div class="footer-logo">
+      <img src="images/logo.png" alt="Fusion Enterprises Logo">
+    </div>
+
+    <!-- Center: Vertical Navbar -->
+    <nav class="footer-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Right: Social Links -->
+    <div class="socials">
+      <a href="https://www.facebook.com/muhammad.umar.268894" target="_blank">Facebook</a>
+      <a href="https://www.instagram.com/muhammadumar30192023" target="_blank">Instagram</a>
+      <a href="https://wa.me/923348033319?" target="_blank">WhatsApp</a>
+    </div>
+  </div>
+
+  <p>&copy; 2025 Fusion Enterprises | All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+
+
+
+</body>
+</html>
